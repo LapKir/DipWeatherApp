@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bod-fD-8H8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kkz-GT-gCp">
-                                <rect key="frame" x="0.0" y="44" width="414" height="605"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="561"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ForecastTableViewCell" id="aSB-cZ-UHY" customClass="ForecastTableViewCell" customModule="DipWeatherApp" customModuleProvider="target">
@@ -132,6 +133,7 @@
                             <constraint firstItem="HIT-WF-2hm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="pok-iF-5UK"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="tsK-dm-7sQ"/>
                     <connections>
                         <outlet property="activityIndicator" destination="bnG-3D-4Io" id="h29-Td-b7h"/>
                         <outlet property="forecastTableView" destination="kkz-GT-gCp" id="NVC-BS-adN"/>
@@ -141,11 +143,91 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="77.678571428571431"/>
+        </scene>
+        <!--Daily Forecast View Controller-->
+        <scene sceneID="WeI-Da-rMe">
+            <objects>
+                <viewController storyboardIdentifier="DailyForecastViewController" id="Fsn-a0-UKk" customClass="DailyForecastViewController" customModule="DipWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aoa-dB-Z1C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2" translatesAutoresizingMaskIntoConstraints="NO" id="hGQ-dW-crV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FDk-Zn-F6g">
+                                <rect key="frame" x="0.0" y="74" width="414" height="573"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PfE-2w-ZX1">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DailyForecastCollectionViewCell" id="1bf-Zy-Eg9" customClass="DailyForecastCollectionViewCell" customModule="DipWeatherApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DUx-uY-D0x">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" red="0.29803922770000002" green="0.63137257099999999" blue="0.92549026010000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Sn-Cj-Qhh">
+                                <rect key="frame" x="20" y="832" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="amF-5f-ZMg"/>
+                                </constraints>
+                                <state key="normal" title="BACK"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JAz-uR-SdL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hGQ-dW-crV" firstAttribute="top" secondItem="aoa-dB-Z1C" secondAttribute="top" id="5DY-0M-utE"/>
+                            <constraint firstItem="7Sn-Cj-Qhh" firstAttribute="bottom" secondItem="aoa-dB-Z1C" secondAttribute="bottomMargin" constant="20" id="6S2-F3-77e"/>
+                            <constraint firstItem="JAz-uR-SdL" firstAttribute="trailing" secondItem="FDk-Zn-F6g" secondAttribute="trailing" id="AHS-d8-lrq"/>
+                            <constraint firstItem="JAz-uR-SdL" firstAttribute="trailing" secondItem="7Sn-Cj-Qhh" secondAttribute="trailing" constant="20" id="OW3-TG-b5d"/>
+                            <constraint firstItem="7Sn-Cj-Qhh" firstAttribute="leading" secondItem="JAz-uR-SdL" secondAttribute="leading" constant="20" id="PH6-4b-blf"/>
+                            <constraint firstItem="FDk-Zn-F6g" firstAttribute="top" secondItem="JAz-uR-SdL" secondAttribute="top" constant="30" id="Sbr-o0-y0o"/>
+                            <constraint firstAttribute="bottom" secondItem="hGQ-dW-crV" secondAttribute="bottom" id="cD0-Z7-fXZ"/>
+                            <constraint firstItem="JAz-uR-SdL" firstAttribute="trailing" secondItem="hGQ-dW-crV" secondAttribute="trailing" id="sQa-t1-AMi"/>
+                            <constraint firstItem="7Sn-Cj-Qhh" firstAttribute="top" secondItem="FDk-Zn-F6g" secondAttribute="bottom" constant="185" id="sZ1-Xc-VhR"/>
+                            <constraint firstItem="FDk-Zn-F6g" firstAttribute="leading" secondItem="JAz-uR-SdL" secondAttribute="leading" id="uho-uR-sG2"/>
+                            <constraint firstItem="hGQ-dW-crV" firstAttribute="leading" secondItem="JAz-uR-SdL" secondAttribute="leading" id="v1C-Ou-uAd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="saL-lC-a9G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1831.8840579710147" y="77.678571428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Puk-eu-z7b">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bod-fD-8H8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RaJ-s0-9k1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oN4-iz-fA8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vez-6h-Gfm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="34.782608695652179" y="77.678571428571431"/>
         </scene>
     </scenes>
     <resources>
         <image name="background" width="1600" height="1200"/>
+        <image name="background2" width="3225" height="4730"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

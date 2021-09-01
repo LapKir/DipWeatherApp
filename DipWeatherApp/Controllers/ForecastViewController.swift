@@ -36,6 +36,7 @@ final class ForecastViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.isHidden = true
         numberOfDaysButton.layer.cornerRadius = 10
         
         locationPicker.delegate = self
