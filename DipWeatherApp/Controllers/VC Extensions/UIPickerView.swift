@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension ForecastViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -32,5 +32,9 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         pickerLabel.text = cities[row]
 
         return pickerLabel
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        getForecast()
     }
 }

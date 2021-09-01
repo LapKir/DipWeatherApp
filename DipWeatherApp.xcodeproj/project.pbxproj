@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		F189633A26DD1E5700D6D956 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F189633926DD1E5700D6D956 /* AppDelegate.swift */; };
 		F189633C26DD1E5700D6D956 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F189633B26DD1E5700D6D956 /* SceneDelegate.swift */; };
-		F189633E26DD1E5700D6D956 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F189633D26DD1E5700D6D956 /* ViewController.swift */; };
+		F189633E26DD1E5700D6D956 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F189633D26DD1E5700D6D956 /* ForecastViewController.swift */; };
 		F189634126DD1E5700D6D956 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F189633F26DD1E5700D6D956 /* Main.storyboard */; };
 		F189634326DD1E5800D6D956 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F189634226DD1E5800D6D956 /* Assets.xcassets */; };
 		F189634626DD1E5800D6D956 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F189634426DD1E5800D6D956 /* LaunchScreen.storyboard */; };
@@ -17,13 +17,16 @@
 		F189635126DE386B00D6D956 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F189635026DE386B00D6D956 /* ForecastModel.swift */; };
 		F189635526DE534700D6D956 /* UIPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F189635426DE534700D6D956 /* UIPickerView.swift */; };
 		F189635726DE5B1E00D6D956 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F189635626DE5B1E00D6D956 /* UITableView.swift */; };
+		F1F3A06626DF9473003E8B47 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F3A06526DF9473003E8B47 /* Observer.swift */; };
+		F1F3A06826DF95D6003E8B47 /* NetWorking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F3A06726DF95D6003E8B47 /* NetWorking.swift */; };
+		F1F3A06A26DFA1C8003E8B47 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F3A06926DFA1C8003E8B47 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F189633626DD1E5700D6D956 /* DipWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DipWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F189633926DD1E5700D6D956 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F189633B26DD1E5700D6D956 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F189633D26DD1E5700D6D956 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F189633D26DD1E5700D6D956 /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		F189634026DD1E5700D6D956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F189634226DD1E5800D6D956 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F189634526DD1E5800D6D956 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +35,9 @@
 		F189635026DE386B00D6D956 /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		F189635426DE534700D6D956 /* UIPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPickerView.swift; sourceTree = "<group>"; };
 		F189635626DE5B1E00D6D956 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		F1F3A06526DF9473003E8B47 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		F1F3A06726DF95D6003E8B47 /* NetWorking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorking.swift; sourceTree = "<group>"; };
+		F1F3A06926DFA1C8003E8B47 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				F189635026DE386B00D6D956 /* ForecastModel.swift */,
+				F1F3A06526DF9473003E8B47 /* Observer.swift */,
+				F1F3A06726DF95D6003E8B47 /* NetWorking.swift */,
+				F1F3A06926DFA1C8003E8B47 /* ViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -87,9 +96,9 @@
 		F189635226DE3D2900D6D956 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F189633D26DD1E5700D6D956 /* ViewController.swift */,
-				F189635326DE52F800D6D956 /* VC Extensions */,
+				F189633D26DD1E5700D6D956 /* ForecastViewController.swift */,
 				F189634D26DE32BF00D6D956 /* ForecastTableViewCell.swift */,
+				F189635326DE52F800D6D956 /* VC Extensions */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -173,9 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F3A06A26DFA1C8003E8B47 /* ViewModel.swift in Sources */,
 				F189635526DE534700D6D956 /* UIPickerView.swift in Sources */,
+				F1F3A06626DF9473003E8B47 /* Observer.swift in Sources */,
+				F1F3A06826DF95D6003E8B47 /* NetWorking.swift in Sources */,
 				F189634E26DE32BF00D6D956 /* ForecastTableViewCell.swift in Sources */,
-				F189633E26DD1E5700D6D956 /* ViewController.swift in Sources */,
+				F189633E26DD1E5700D6D956 /* ForecastViewController.swift in Sources */,
 				F189633A26DD1E5700D6D956 /* AppDelegate.swift in Sources */,
 				F189635126DE386B00D6D956 /* ForecastModel.swift in Sources */,
 				F189633C26DD1E5700D6D956 /* SceneDelegate.swift in Sources */,
