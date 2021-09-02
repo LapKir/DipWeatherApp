@@ -63,7 +63,20 @@ final class ForecastViewController: UIViewController {
     //MARK: - @IBAction
     
     @IBAction func daysButtonPressed(_ sender: UIButton) {
-        
+        let alert = UIAlertController(title: "Select number of days", message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "3 DAYS", style: .default, handler: { _ in
+            self.daysSelected = 3
+            self.getForecast()
+        }))
+        alert.addAction(UIAlertAction(title: "10 DAYS", style: .default, handler: { _ in
+            self.daysSelected = 10
+            self.getForecast()
+        }))
+        alert.addAction(UIAlertAction(title: "16 DAYS", style: .default, handler: { _ in
+            self.daysSelected = 16
+            self.getForecast()
+        }))
+        present(alert, animated: true, completion: nil)
     }
     
     //MARK: - Get Forecast Methods
