@@ -21,7 +21,7 @@ extension ForecastViewController: UITableViewDelegate, UITableViewDataSource {
         DispatchQueue.main.async {
             let forecast = self.viewModel.forecastModel.value
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "MMM d"
+            dateFormatter.dateFormat = "yyyy-MM-dd"
             cell.descriptionLabel.text = forecast?.data[indexPath.row].weather.description
             
             if let imageName = forecast?.data[indexPath.row].weather.icon,
@@ -48,5 +48,9 @@ extension ForecastViewController: UITableViewDelegate, UITableViewDataSource {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "DailyForecastViewController") as DailyForecastViewController
         navigationController?.show(vc, sender: nil)
+        
+        tableView.sectionIndexColor = .black
+        tableView.sectionIndexTrackingBackgroundColor = .black
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

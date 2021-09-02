@@ -21,6 +21,7 @@ class DailyForecastViewController: UIViewController {
     
 
     @IBAction func backButtonPressed(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
     
 }
