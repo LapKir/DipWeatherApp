@@ -31,13 +31,13 @@ final class ForecastViewController: UIViewController {
     ]
     let viewModel = ViewModel()
     let locationManager = CLLocationManager()
+    
     var daysSelected = 3
     var currentLocation = CLLocation()
-    
     var netWorking: Networking?
     var forecastModel: ForecastModel?
     
-    //MARK: - ViewDidLoad Function
+    //MARK: - ViewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()

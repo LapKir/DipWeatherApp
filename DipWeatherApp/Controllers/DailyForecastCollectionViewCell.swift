@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DailyForecastCollectionViewCell: UICollectionViewCell {
+final class DailyForecastCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!

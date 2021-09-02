@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Observer<T> {
+final class Observer<T> {
     
     private var listener: ((T) -> ())?
     

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ForecastTableViewCell: UITableViewCell {
+final class ForecastTableViewCell: UITableViewCell {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -23,5 +23,4 @@ class ForecastTableViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
-    
 }

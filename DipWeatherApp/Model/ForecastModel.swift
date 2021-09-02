@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct ForecastModel: Codable {
     let data: [Day]
     let city: String
