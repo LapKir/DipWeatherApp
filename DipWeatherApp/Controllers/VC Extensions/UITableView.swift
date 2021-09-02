@@ -30,7 +30,7 @@ extension ForecastViewController: UITableViewDelegate, UITableViewDataSource {
                 
                 cell.conditionImage.image = UIImage(named: imageName)
                 cell.temperatureLabel.text = "\(temperature)°C"
-                
+              
                 if let date = dateFormatter.date(from: dateString) {
                     dateFormatter.dateFormat = "MMM d"
                     cell.dateLabel.text = dateFormatter.string(from: date)
@@ -47,6 +47,9 @@ extension ForecastViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "DailyForecastViewController") as DailyForecastViewController
+        
+        vc.forecast = viewModel.forecastModel.value
+        vc.totalDays = daysSelected
         navigationController?.show(vc, sender: nil)
         
         tableView.sectionIndexColor = .black

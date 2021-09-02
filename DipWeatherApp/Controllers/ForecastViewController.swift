@@ -9,7 +9,7 @@ import UIKit
 import CoreLocation
 
 final class ForecastViewController: UIViewController {
-
+    
     //MARK: - @IBOutlets
     
     @IBOutlet weak var numberOfDaysButton: UIButton!
@@ -21,10 +21,9 @@ final class ForecastViewController: UIViewController {
     
     private var selectedCity = ""
     private var fullUrl = ""
-    private var daysSelected = 3
     private let url = "https://api.weatherbit.io/v2.0/forecast/daily?"
     private let apiKey = "&key=5bdf01b8ef6d43ffb704223944098a6a"
-
+    
     let cities: [String] = [
         "Current location", "Minsk", "Vilnius",
         "Moscow", "Riga", "Tallinn", "Berlin",
@@ -32,8 +31,9 @@ final class ForecastViewController: UIViewController {
     ]
     let viewModel = ViewModel()
     let locationManager = CLLocationManager()
+    var daysSelected = 3
     var currentLocation = CLLocation()
-
+    
     var netWorking: Networking?
     var forecastModel: ForecastModel?
     
@@ -61,7 +61,7 @@ final class ForecastViewController: UIViewController {
     }
     
     //MARK: - @IBAction
-
+    
     @IBAction func daysButtonPressed(_ sender: UIButton) {
         
     }
