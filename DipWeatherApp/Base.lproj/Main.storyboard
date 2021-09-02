@@ -158,22 +158,46 @@
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FDk-Zn-F6g">
                                 <rect key="frame" x="0.0" y="74" width="414" height="573"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PfE-2w-ZX1">
-                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="itemSize" width="415" height="573"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DailyForecastCollectionViewCell" id="1bf-Zy-Eg9" customClass="DailyForecastCollectionViewCell" customModule="DipWeatherApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="415" height="573"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DUx-uY-D0x">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="415" height="573"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lm3-lG-sJs">
+                                                    <rect key="frame" x="164" y="10" width="87.5" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="D7X-sM-Nrv"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWJ-pf-X53">
+                                                    <rect key="frame" x="140" y="80" width="135.5" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cWJ-pf-X53" firstAttribute="top" secondItem="lm3-lG-sJs" secondAttribute="bottom" constant="20" id="47o-UP-3SW"/>
+                                                <constraint firstItem="lm3-lG-sJs" firstAttribute="centerX" secondItem="DUx-uY-D0x" secondAttribute="centerX" id="SAA-Co-vVq"/>
+                                                <constraint firstItem="lm3-lG-sJs" firstAttribute="top" secondItem="DUx-uY-D0x" secondAttribute="top" constant="10" id="W4K-xm-hWV"/>
+                                                <constraint firstItem="cWJ-pf-X53" firstAttribute="centerX" secondItem="DUx-uY-D0x" secondAttribute="centerX" id="uFk-Bg-tcU"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" red="0.29803922770000002" green="0.63137257099999999" blue="0.92549026010000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="415" height="573"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -183,6 +207,9 @@
                                     <constraint firstAttribute="height" constant="50" id="amF-5f-ZMg"/>
                                 </constraints>
                                 <state key="normal" title="BACK"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="Fsn-a0-UKk" eventType="touchUpInside" id="dt6-mu-UDE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JAz-uR-SdL"/>
@@ -201,6 +228,10 @@
                             <constraint firstItem="hGQ-dW-crV" firstAttribute="leading" secondItem="JAz-uR-SdL" secondAttribute="leading" id="v1C-Ou-uAd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="7Sn-Cj-Qhh" id="YKV-Eb-wZC"/>
+                        <outlet property="forecastCollectionView" destination="FDk-Zn-F6g" id="Jdy-VB-JvG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saL-lC-a9G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

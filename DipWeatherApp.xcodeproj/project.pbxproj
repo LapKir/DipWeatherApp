@@ -23,6 +23,7 @@
 		F1F3A06C26DFC0E5003E8B47 /* DailyForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F3A06B26DFC0E5003E8B47 /* DailyForecastViewController.swift */; };
 		F1F3A06E26DFC115003E8B47 /* DailyForecastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F3A06D26DFC115003E8B47 /* DailyForecastCollectionViewCell.swift */; };
 		F1F3A07026DFC563003E8B47 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F3A06F26DFC563003E8B47 /* UICollectionView.swift */; };
+		F1F3A07226E0D099003E8B47 /* CLLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F3A07126E0D099003E8B47 /* CLLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		F1F3A06B26DFC0E5003E8B47 /* DailyForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastViewController.swift; sourceTree = "<group>"; };
 		F1F3A06D26DFC115003E8B47 /* DailyForecastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastCollectionViewCell.swift; sourceTree = "<group>"; };
 		F1F3A06F26DFC563003E8B47 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		F1F3A07126E0D099003E8B47 /* CLLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			children = (
 				F189635426DE534700D6D956 /* UIPickerView.swift */,
 				F189635626DE5B1E00D6D956 /* UITableView.swift */,
+				F1F3A07126E0D099003E8B47 /* CLLocation.swift */,
 				F1F3A06F26DFC563003E8B47 /* UICollectionView.swift */,
 			);
 			path = "VC Extensions";
@@ -194,6 +197,7 @@
 				F1F3A06A26DFA1C8003E8B47 /* ViewModel.swift in Sources */,
 				F189635526DE534700D6D956 /* UIPickerView.swift in Sources */,
 				F1F3A06626DF9473003E8B47 /* Observer.swift in Sources */,
+				F1F3A07226E0D099003E8B47 /* CLLocation.swift in Sources */,
 				F1F3A06826DF95D6003E8B47 /* NetWorking.swift in Sources */,
 				F189634E26DE32BF00D6D956 /* ForecastTableViewCell.swift in Sources */,
 				F189633E26DD1E5700D6D956 /* ForecastViewController.swift in Sources */,

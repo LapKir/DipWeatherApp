@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import CoreLocation
 
 final class ForecastViewController: UIViewController {
+
+    //MARK: - @IBOutlets
     
     @IBOutlet weak var numberOfDaysButton: UIButton!
     @IBOutlet weak var locationPicker: UIPickerView!
@@ -19,7 +22,7 @@ final class ForecastViewController: UIViewController {
     private var selectedCity = ""
     private var fullUrl = ""
     private var daysSelected = 3
-    private let url = "https://api.weatherbit.io/v2.0/forecast/daily?city="
+    private let url = "https://api.weatherbit.io/v2.0/forecast/daily?"
     private let apiKey = "&key=5bdf01b8ef6d43ffb704223944098a6a"
 
     let cities: [String] = [
@@ -28,9 +31,12 @@ final class ForecastViewController: UIViewController {
         "Warsaw", "Amsterdam", "London"
     ]
     let viewModel = ViewModel()
+    let locationManager = CLLocationManager()
+    var currentLocation = CLLocation()
 
     var netWorking: Networking?
     var forecastModel: ForecastModel?
+    
     //MARK: - ViewDidLoad Function
     
     override func viewDidLoad() {
@@ -46,6 +52,12 @@ final class ForecastViewController: UIViewController {
         forecastTableView.dataSource = self
         
         activityIndicator.startAnimating()
+        
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
+        
+        getForecast()
     }
     
     //MARK: - @IBAction
@@ -59,7 +71,11 @@ final class ForecastViewController: UIViewController {
     func getForecast() {
         if locationPicker.selectedRow(inComponent: 0) != 0 {
             selectedCity = cities[locationPicker.selectedRow(inComponent: 0)]
-            fullUrl = url + selectedCity + apiKey + "&days=\(daysSelected)"
+            fullUrl = url + "city=\(selectedCity)" + apiKey + "&days=\(daysSelected)"
+        } else if locationPicker.selectedRow(inComponent: 0) == 0 {
+            let lat = currentLocation.coordinate.latitude
+            let lon = currentLocation.coordinate.longitude
+            fullUrl = url + "lat=\(lat)" + "&lon=\(lon)" + apiKey + "&days=\(daysSelected)"
         }
         weatherRequest()
     }
