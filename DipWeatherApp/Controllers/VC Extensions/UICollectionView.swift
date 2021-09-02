@@ -20,8 +20,6 @@ extension DailyForecastViewController: UICollectionViewDelegate, UICollectionVie
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DailyForecastCollectionViewCell", for: indexPath) as? DailyForecastCollectionViewCell else { return DailyForecastCollectionViewCell() }
         
         DispatchQueue.main.async {
-            cell.sunriseImage.image = UIImage(systemName: "sunrise")
-            cell.sunsetImage.image = UIImage(systemName: "sunset")
             let dateFormatter = DateFormatter()
             
             if let sunrise = self.forecast?.data[indexPath.row].sunrise {

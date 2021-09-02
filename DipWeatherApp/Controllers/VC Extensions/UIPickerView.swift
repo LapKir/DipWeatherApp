@@ -26,7 +26,6 @@ extension ForecastViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         
         let pickerLabel = UILabel()
         
-        pickerLabel.textColor = .black
         pickerLabel.font = UIFont.boldSystemFont(ofSize: 30)
         pickerLabel.textAlignment = .center
         pickerLabel.text = cities[row]
