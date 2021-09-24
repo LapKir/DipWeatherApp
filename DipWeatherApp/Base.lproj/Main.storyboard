@@ -22,6 +22,9 @@
                             </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXd-wv-CAg">
                                 <rect key="frame" x="0.0" y="677" width="414" height="120"/>
+                                <accessibility key="accessibilityConfiguration" identifier="city-picker">
+                                    <accessibilityTraits key="traits" staticText="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="LUf-mT-f5T"/>
                                 </constraints>
@@ -180,6 +183,7 @@
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWJ-pf-X53">
                                                             <rect key="frame" x="130" y="95" width="135.5" height="32"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="city-name"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
