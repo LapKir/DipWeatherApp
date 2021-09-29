@@ -94,15 +94,15 @@ final class ForecastViewController: UIViewController {
     }
     
     func weatherRequest() {
-        viewModel.forecastModel.bind { forecast in
+        viewModel.forecastModel.bind { [weak self] forecast in
             DispatchQueue.main.async {
                 if forecast != nil {
-                    self.activityIndicator.stopAnimating()
-                    self.activityIndicator.isHidden = true
-                    self.forecastTableView.reloadData()
+                    self?.activityIndicator.stopAnimating()
+                    self?.activityIndicator.isHidden = true
+                    self?.forecastTableView.reloadData()
                 } else {
-                    self.activityIndicator.startAnimating()
-                    self.activityIndicator.isHidden = false
+                    self?.activityIndicator.startAnimating()
+                    self?.activityIndicator.isHidden = false
                 }
             }
         }
